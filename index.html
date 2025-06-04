@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Telegram Translator</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Подключаем Telegram Web App SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Переводчик</h1>
+
+    <!-- Поле ввода текста -->
+    <textarea id="inputText" placeholder="Введите текст..." rows="4"></textarea>
+
+    <!-- Выбор языка исходного текста -->
+    <div class="selectors">
+      <label for="sourceLang">С языка:</label>
+      <select id="sourceLang">
+        <option value="auto">Авто</option>
+        <option value="ru">Русский</option>
+        <option value="en">Английский</option>
+        <option value="zh">Китайский</option>
+      </select>
+
+      <label for="targetLang">На язык:</label>
+      <select id="targetLang">
+        <option value="ru">Русский</option>
+        <option value="en" selected>Английский</option>
+        <option value="zh">Китайский</option>
+      </select>
+    </div>
+
+    <!-- Кнопка перевода -->
+    <button id="translateBtn">Перевести</button>
+
+    <!-- Результат -->
+    <h2>Результат:</h2>
+    <div id="outputText" class="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
